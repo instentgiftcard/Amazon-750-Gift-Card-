@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon $750 Gift Card</title>
+  <style>
+    /* General Styling */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(45deg, #0044ff, #ffcc00, #00ff99, #ffffff);
+      background-size: 300% 300%;
+      animation: backgroundAnimation 10s infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      color: #333;
+    }
+
+    @keyframes backgroundAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      text-align: center;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      width: 90%;
+      max-width: 500px;
+    }
+
+    /* Title Styling */
+    h1 {
+      font-size: 2.5rem;
+      color: #0044ff;
+      font-weight: bold;
+      animation: bouncePulse 2s infinite;
+    }
+
+    @keyframes bouncePulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+
+    /* Subtitle */
+    h3 {
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    /* Image Styling */
+    .offer-image {
+      width: 100%;
+      max-width: 300px;
+      animation: bouncePulse 2s infinite;
+      margin-bottom: 20px;
+    }
+
+    /* Email Input Form */
+    form {
+      margin-bottom: 20px;
+    }
+
+    input[type="email"] {
+      width: 80%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      animation: inputGlow 3s infinite;
+    }
+
+    @keyframes inputGlow {
+      0%, 100% { box-shadow: 0 0 10px #0044ff; }
+      50% { box-shadow: 0 0 20px #00ff99; }
+    }
+
+    .claim-btn {
+      background-color: #ffcc00;
+      color: #0044ff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      animation: bouncePulse 2s infinite, glowEffect 3s infinite;
+    }
+
+    @keyframes glowEffect {
+      0%, 100% { box-shadow: 0 0 10px #ffcc00; }
+      50% { box-shadow: 0 0 20px #00ff99; }
+    }
+
+    .claim-btn:hover {
+      background-color: #0044ff;
+      color: #fff;
+    }
+
+    /* Countdown Timer */
+    .countdown {
+      font-size: 1.2rem;
+      margin: 20px 0;
+      color: #ff0000;
+      font-weight: bold;
+    }
+
+    /* Pop-up Notification */
+    .popup {
+      background: #ffcc00;
+      color: #0044ff;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      display: none;
+      animation: slideIn 1s forwards;
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    /* Steps Section */
+    .steps {
+      text-align: left;
+      margin-top: 20px;
+    }
+
+    .steps h4 {
+      font-size: 1rem;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .steps p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Three Line Button -->
+    <button style="position: absolute; top: 10px; left: 10px;" onclick="window.location.href='https://go4affm.com/c/?p=40201&o=18653&subid=1234'">&#9776;</button>
+
+    <!-- Title -->
+    <h1>Win an Amazon $750 Gift Card!</h1>
+    <h3>100% Legit, No Purchase Required</h3>
+
+    <!-- Image -->
+    <img src="https://i.ibb.co/5hQMgSG/585105a1554e.jpg" alt="Gift Card Image" class="offer-image">
+
+    <!-- Email Form -->
+    <form id="emailForm">
+      <input type="email" id="emailInput" placeholder="Enter your email" required>
+      <button type="submit" class="claim-btn">Claim Now</button>
+    </form>
+    <p>Your information is secure and will not be shared.</p>
+
+    <!-- Countdown Timer -->
+    <div class="countdown">Offer expires in: <span id="timer">00:10:00</span></div>
+
+    <!-- Pop-up Notification -->
+    <div class="popup" id="popup">John from California just won a $750 Amazon Gift Card!</div>
+
+    <!-- Steps -->
+    <div class="steps">
+      <h4>Steps to Claim:</h4>
+      <p>1. Submit your email.</p>
+      <p>2. Check your email and follow the link.</p>
+      <p>3. Claim your prize!</p>
+    </div>
+  </div>
+
+  <script>
+    // Countdown Timer
+    let time = 10 * 60;
+    const timerElement = document.getElementById('timer');
+
+    function updateTimer() {
+      const minutes = Math.floor(time / 60);
+      const seconds = time % 60;
+      timerElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+      if (time > 0) {
+        time--;
+      }
+    }
+    setInterval(updateTimer, 1000);
+
+    // Email Form
+    document.getElementById('emailForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const email = document.getElementById('emailInput').value;
+      if (email) {
+        const affiliateLink = `https://go4affm.com/c/?p=40201&o=18653&subid=1234`;
+        window.location.href = affiliateLink;
+      } else {
+        alert('Please enter a valid email!');
+      }
+    });
+
+    // Popup Notification
+    setTimeout(() => {
+      document.getElementById('popup').style.display = 'block';
+    }, 5000);
+  </script>
+</body>
+</html>
